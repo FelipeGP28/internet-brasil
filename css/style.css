@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #06131c;
+    color: #f2fbff;
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(6, 19, 28, .95);
+
+    border-bottom: 1px solid #183c4d;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #27d6ff;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c6dce5;
+}
+
+nav a:hover {
+    color: #27d6ff;
+}
+
+section {
+    padding: 90px 7%;
+}
+
+.hero {
+    min-height: 88vh;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 60px;
+
+    background:
+    radial-gradient(
+        circle at 80% 20%,
+        #063f55,
+        transparent 35%
+    );
+}
+
+.tag,
+.section-title span,
+.light span {
+    color: #27d6ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero h1 strong {
+    display: block;
+    color: #27d6ff;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #aac3cc;
+    font-size: 1.15rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.primary {
+    background: #27d6ff;
+    color: #031117;
+}
+
+.secondary {
+    border: 1px solid #27d6ff;
+    color: #27d6ff;
+    background: transparent;
+}
+
+.hero-card {
+    padding: 45px;
+
+    border: 1px solid #19536b;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.04);
+}
+
+.globe {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.connection {
+    margin-top: 20px;
+    color: #27d6ff;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 800px;
+    margin: auto auto 45px;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #9db6c0;
+}
+
+.problem-grid,
+.points,
+.course-grid,
+.partner-grid,
+.dashboard {
+    display: grid;
+    gap: 20px;
+}
+
+.problem-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.problem-grid article,
+.point,
+.course-grid article,
+.metric,
+.partner-grid div {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #194357;
+
+    background: rgba(255,255,255,.04);
+}
+
+.problem-grid article span,
+.point span,
+.course-grid article span {
+    font-size: 2.5rem;
+}
+
+.problem-grid h3,
+.point h3,
+.course-grid h3 {
+    margin: 12px 0;
+}
+
+.problem-grid p,
+.point p,
+.course-grid p {
+    color: #9fb8c0;
+}
+
+.map-container {
+    min-height: 330px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #092734,
+            #071820
+        );
+
+    border: 1px solid #194357;
+}
+
+.map-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(0,0,0,.2);
+}
+
+.map-card strong {
+    font-size: 3rem;
+}
+
+.red {
+    border: 1px solid #ef6666;
+}
+
+.yellow {
+    border: 1px solid #e4c44f;
+}
+
+.green {
+    border: 1px solid #36d89a;
+}
+
+.points {
+    grid-template-columns: repeat(3,1fr);
+}
+
+.point small {
+    display: block;
+    margin-top: 20px;
+    color: #27d6ff;
+}
+
+.course-grid {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.course-grid button {
+    margin-top: 20px;
+
+    border: 1px solid #27d6ff;
+
+    background: transparent;
+
+    color: #27d6ff;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.course-grid button:hover {
+    background: #27d6ff;
+    color: #031117;
+}
+
+.course-result {
+    max-width: 700px;
+    margin: 30px auto 0;
+
+    padding: 25px;
+
+    border: 1px solid #27d6ff;
+
+    border-radius: 15px;
+
+    background: rgba(39,214,255,.05);
+}
+
+.dashboard {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.metric span {
+    font-size: 2rem;
+}
+
+.metric h3 {
+    font-size: 2.5rem;
+    color: #27d6ff;
+}
+
+.metric p {
+    color: #9db6c0;
+}
+
+.success {
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #36d89a;
+
+    background: rgba(54,216,154,.05);
+}
+
+.donation {
+    max-width: 700px;
+    margin: auto;
+}
+
+select {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #081c26;
+
+    color: white;
+
+    border: 1px solid #315565;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+}
+
+.light {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 50px;
+
+    border-top: 1px solid #163b4b;
+
+    border-bottom: 1px solid #163b4b;
+}
+
+.light h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+}
+
+.light p {
+    color: #a7bec5;
+}
+
+.light-list {
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(39,214,255,.04);
+
+    border: 1px solid #194357;
+}
+
+.light-list p {
+    margin: 10px 0;
+}
+
+.partner-grid {
+    grid-template-columns: repeat(4,1fr);
+}
+
+.partner-grid div {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.partner-grid h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #173a49;
+
+    color: #9eb8c0;
+}
+
+footer h3 {
+    color: #27d6ff;
+}
+
+@media(max-width:1000px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero,
+    .light {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-grid,
+    .points,
+    .course-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .dashboard {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .partner-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px) {
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .problem-grid,
+    .points,
+    .course-grid,
+    .dashboard,
+    .partner-grid,
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+}
