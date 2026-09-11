@@ -20,9 +20,9 @@ html {
 body {
     font-family: Arial, sans-serif;
 
-    background: #06131c;
+    background: #0d0716;
 
-    color: #f2fbff;
+    color: #f8f3ff;
 
     line-height: 1.6;
 }
@@ -47,9 +47,9 @@ header {
 
     padding: 18px 7%;
 
-    background: rgba(6, 19, 28, .95);
+    background: rgba(13, 7, 22, .95);
 
-    border-bottom: 1px solid #183c4d;
+    border-bottom: 1px solid #32194f;
 }
 
 .logo {
@@ -59,7 +59,7 @@ header {
 }
 
 .logo span {
-    color: #27d6ff;
+    color: #a855f7;
 }
 
 
@@ -76,13 +76,13 @@ nav {
 nav a {
     text-decoration: none;
 
-    color: #c6dce5;
+    color: #d8c9e8;
 
     transition: .2s;
 }
 
 nav a:hover {
-    color: #27d6ff;
+    color: #a855f7;
 }
 
 
@@ -113,7 +113,7 @@ section {
     background:
         radial-gradient(
             circle at 80% 20%,
-            #063f55,
+            #3b1764,
             transparent 35%
         );
 }
@@ -121,7 +121,7 @@ section {
 .tag,
 .section-title span,
 .light span {
-    color: #27d6ff;
+    color: #a855f7;
 
     font-weight: bold;
 
@@ -139,13 +139,13 @@ section {
 .hero h1 strong {
     display: block;
 
-    color: #27d6ff;
+    color: #a855f7;
 }
 
 .hero p {
     max-width: 650px;
 
-    color: #aac3cc;
+    color: #c4b5d4;
 
     font-size: 1.15rem;
 }
@@ -184,29 +184,29 @@ section {
 }
 
 .primary {
-    background: #27d6ff;
+    background: #a855f7;
 
-    color: #031117;
+    color: #140820;
 }
 
 .primary:hover {
-    background: #6be4ff;
+    background: #c084fc;
 
     transform: translateY(-2px);
 }
 
 .secondary {
-    border: 1px solid #27d6ff;
+    border: 1px solid #a855f7;
 
-    color: #27d6ff;
+    color: #a855f7;
 
     background: transparent;
 }
 
 .secondary:hover {
-    background: #27d6ff;
+    background: #a855f7;
 
-    color: #031117;
+    color: #140820;
 }
 
 
@@ -217,7 +217,7 @@ section {
 .hero-card {
     padding: 45px;
 
-    border: 1px solid #19536b;
+    border: 1px solid #5b2a82;
 
     border-radius: 25px;
 
@@ -233,7 +233,7 @@ section {
 .connection {
     margin-top: 20px;
 
-    color: #27d6ff;
+    color: #a855f7;
 }
 
 
@@ -256,7 +256,7 @@ section {
 }
 
 .section-title p {
-    color: #9db6c0;
+    color: #b8a8c7;
 }
 
 
@@ -292,7 +292,7 @@ section {
 
     border-radius: 20px;
 
-    border: 1px solid #194357;
+    border: 1px solid #4b2469;
 
     background: rgba(255,255,255,.04);
 
@@ -304,7 +304,7 @@ section {
 .course-grid article:hover,
 .metric:hover,
 .partner-grid div:hover {
-    border-color: #27d6ff;
+    border-color: #a855f7;
 
     transform: translateY(-3px);
 }
@@ -324,7 +324,7 @@ section {
 .problem-grid p,
 .point p,
 .course-grid p {
-    color: #9fb8c0;
+    color: #b9a9c7;
 }
 
 
@@ -354,9 +354,9 @@ section {
 
     overflow: hidden;
 
-    border: 1px solid #194357;
+    border: 1px solid #4b2469;
 
-    background: #092734;
+    background: #211033;
 }
 
 
@@ -369,7 +369,7 @@ section {
 
     border-radius: 20px;
 
-    border: 1px solid #194357;
+    border: 1px solid #4b2469;
 
     background: rgba(255,255,255,.04);
 }
@@ -387,7 +387,7 @@ section {
 
     margin: 15px 0;
 
-    color: #aac3cc;
+    color: #c4b5d4;
 }
 
 .marker {
@@ -417,7 +417,7 @@ section {
 .map-help {
     margin-top: 30px;
 
-    color: #8faab4;
+    color: #9d8aad;
 
     font-size: .9rem;
 }
@@ -428,15 +428,15 @@ section {
 ========================================== */
 
 .leaflet-popup-content-wrapper {
-    background: #06131c;
+    background: #0d0716;
 
-    color: #f2fbff;
+    color: #f8f3ff;
 
-    border: 1px solid #194357;
+    border: 1px solid #4b2469;
 }
 
 .leaflet-popup-tip {
-    background: #06131c;
+    background: #0d0716;
 }
 
 .leaflet-popup-content {
@@ -444,19 +444,19 @@ section {
 }
 
 .leaflet-popup-content h3 {
-    color: #27d6ff;
+    color: #a855f7;
 
     margin-bottom: 10px;
 }
 
 .leaflet-popup-content p {
-    color: #aac3cc;
+    color: #c4b5d4;
 
     margin: 5px 0;
 }
 
 .leaflet-container a {
-    color: #27d6ff;
+    color: #a855f7;
 }
 
 
@@ -473,7 +473,7 @@ section {
 
     margin-top: 20px;
 
-    color: #27d6ff;
+    color: #a855f7;
 }
 
 
@@ -488,11 +488,11 @@ section {
 .course-grid button {
     margin-top: 20px;
 
-    border: 1px solid #27d6ff;
+    border: 1px solid #a855f7;
 
     background: transparent;
 
-    color: #27d6ff;
+    color: #a855f7;
 
     padding: 10px 15px;
 
@@ -504,9 +504,9 @@ section {
 }
 
 .course-grid button:hover {
-    background: #27d6ff;
+    background: #a855f7;
 
-    color: #031117;
+    color: #140820;
 }
 
 .course-result {
@@ -516,21 +516,21 @@ section {
 
     padding: 25px;
 
-    border: 1px solid #27d6ff;
+    border: 1px solid #a855f7;
 
     border-radius: 15px;
 
-    background: rgba(39,214,255,.05);
+    background: rgba(168,85,247,.05);
 }
 
 .course-result h3 {
-    color: #27d6ff;
+    color: #a855f7;
 
     margin-bottom: 10px;
 }
 
 .course-result p {
-    color: #aac3cc;
+    color: #c4b5d4;
 
     margin-bottom: 10px;
 }
@@ -551,11 +551,11 @@ section {
 .metric h3 {
     font-size: 2.5rem;
 
-    color: #27d6ff;
+    color: #a855f7;
 }
 
 .metric p {
-    color: #9db6c0;
+    color: #b8a8c7;
 }
 
 
@@ -584,7 +584,7 @@ section {
 }
 
 .success p {
-    color: #aac3cc;
+    color: #c4b5d4;
 
     margin: 8px 0;
 }
@@ -605,11 +605,11 @@ select {
 
     padding: 15px;
 
-    background: #081c26;
+    background: #170c24;
 
     color: white;
 
-    border: 1px solid #315565;
+    border: 1px solid #5b3972;
 
     border-radius: 10px;
 
@@ -621,7 +621,7 @@ select {
 select:focus {
     outline: none;
 
-    border-color: #27d6ff;
+    border-color: #a855f7;
 }
 
 
@@ -636,9 +636,9 @@ select:focus {
 
     gap: 50px;
 
-    border-top: 1px solid #163b4b;
+    border-top: 1px solid #351d4b;
 
-    border-bottom: 1px solid #163b4b;
+    border-bottom: 1px solid #351d4b;
 }
 
 .light h2 {
@@ -648,7 +648,7 @@ select:focus {
 }
 
 .light p {
-    color: #a7bec5;
+    color: #b9a9c7;
 }
 
 .light-list {
@@ -656,9 +656,9 @@ select:focus {
 
     border-radius: 20px;
 
-    background: rgba(39,214,255,.04);
+    background: rgba(168,85,247,.04);
 
-    border: 1px solid #194357;
+    border: 1px solid #4b2469;
 }
 
 .light-list p {
@@ -696,13 +696,13 @@ footer {
 
     text-align: center;
 
-    border-top: 1px solid #173a49;
+    border-top: 1px solid #351d4b;
 
-    color: #9eb8c0;
+    color: #b8a8c7;
 }
 
 footer h3 {
-    color: #27d6ff;
+    color: #a855f7;
 
     margin-bottom: 5px;
 }
