@@ -1,8 +1,17 @@
+/* ==========================================
+   RESET
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
 
 html {
     scroll-behavior: smooth;
@@ -10,18 +19,30 @@ html {
 
 body {
     font-family: Arial, sans-serif;
+
     background: #06131c;
+
     color: #f2fbff;
+
     line-height: 1.6;
 }
 
+
+/* ==========================================
+   HEADER
+========================================== */
+
 header {
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     padding: 18px 7%;
@@ -33,6 +54,7 @@ header {
 
 .logo {
     font-size: 1.4rem;
+
     font-weight: bold;
 }
 
@@ -40,96 +62,163 @@ header {
     color: #27d6ff;
 }
 
+
+/* ==========================================
+   NAVEGAÇÃO
+========================================== */
+
 nav {
     display: flex;
+
     gap: 20px;
 }
 
 nav a {
     text-decoration: none;
+
     color: #c6dce5;
+
+    transition: .2s;
 }
 
 nav a:hover {
     color: #27d6ff;
 }
 
+
+/* ==========================================
+   SEÇÕES
+========================================== */
+
 section {
     padding: 90px 7%;
 }
+
+
+/* ==========================================
+   HERO
+========================================== */
 
 .hero {
     min-height: 88vh;
 
     display: grid;
+
     grid-template-columns: 1.5fr 1fr;
+
     align-items: center;
+
     gap: 60px;
 
     background:
-    radial-gradient(
-        circle at 80% 20%,
-        #063f55,
-        transparent 35%
-    );
+        radial-gradient(
+            circle at 80% 20%,
+            #063f55,
+            transparent 35%
+        );
 }
 
 .tag,
 .section-title span,
 .light span {
     color: #27d6ff;
+
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
 .hero h1 {
     font-size: clamp(3rem, 7vw, 6rem);
+
     line-height: 1;
+
     margin: 20px 0;
 }
 
 .hero h1 strong {
     display: block;
+
     color: #27d6ff;
 }
 
 .hero p {
     max-width: 650px;
+
     color: #aac3cc;
+
     font-size: 1.15rem;
 }
 
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
 .buttons {
     display: flex;
+
     gap: 15px;
+
     margin-top: 30px;
+
     flex-wrap: wrap;
 }
 
 .btn {
     border: none;
+
     padding: 14px 22px;
+
     border-radius: 10px;
+
     cursor: pointer;
+
     font-weight: bold;
+
     text-decoration: none;
+
+    display: inline-block;
+
+    transition: .2s;
 }
 
 .primary {
     background: #27d6ff;
+
     color: #031117;
+}
+
+.primary:hover {
+    background: #6be4ff;
+
+    transform: translateY(-2px);
 }
 
 .secondary {
     border: 1px solid #27d6ff;
+
     color: #27d6ff;
+
     background: transparent;
 }
+
+.secondary:hover {
+    background: #27d6ff;
+
+    color: #031117;
+}
+
+
+/* ==========================================
+   CARD DO HERO
+========================================== */
 
 .hero-card {
     padding: 45px;
 
     border: 1px solid #19536b;
+
     border-radius: 25px;
 
     background: rgba(255,255,255,.04);
@@ -137,22 +226,32 @@ section {
 
 .globe {
     font-size: 5rem;
+
     margin-bottom: 20px;
 }
 
 .connection {
     margin-top: 20px;
+
     color: #27d6ff;
 }
 
+
+/* ==========================================
+   TÍTULOS DAS SEÇÕES
+========================================== */
+
 .section-title {
     text-align: center;
+
     max-width: 800px;
+
     margin: auto auto 45px;
 }
 
 .section-title h2 {
     font-size: 2.8rem;
+
     margin: 10px 0;
 }
 
@@ -160,14 +259,25 @@ section {
     color: #9db6c0;
 }
 
+
+/* ==========================================
+   GRIDS
+========================================== */
+
 .problem-grid,
 .points,
 .course-grid,
 .partner-grid,
 .dashboard {
     display: grid;
+
     gap: 20px;
 }
+
+
+/* ==========================================
+   CARDS
+========================================== */
 
 .problem-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -185,6 +295,18 @@ section {
     border: 1px solid #194357;
 
     background: rgba(255,255,255,.04);
+
+    transition: .2s;
+}
+
+.problem-grid article:hover,
+.point:hover,
+.course-grid article:hover,
+.metric:hover,
+.partner-grid div:hover {
+    border-color: #27d6ff;
+
+    transform: translateY(-3px);
 }
 
 .problem-grid article span,
@@ -205,70 +327,162 @@ section {
     color: #9fb8c0;
 }
 
-.map-container {
-    min-height: 330px;
 
+/* ==========================================
+   MAPA
+========================================== */
+
+.map-wrapper {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+
+    grid-template-columns: 1fr 280px;
+
     gap: 20px;
 
-    padding: 30px;
+    margin-top: 40px;
+}
+
+
+/* Área onde o Leaflet será carregado */
+
+#map {
+    width: 100%;
+
+    height: 450px;
 
     border-radius: 25px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #092734,
-            #071820
-        );
+    overflow: hidden;
 
     border: 1px solid #194357;
+
+    background: #092734;
 }
 
-.map-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    text-align: center;
+/* ==========================================
+   PAINEL DO MAPA
+========================================== */
 
+.map-info {
     padding: 30px;
 
     border-radius: 20px;
 
-    background: rgba(0,0,0,.2);
+    border: 1px solid #194357;
+
+    background: rgba(255,255,255,.04);
 }
 
-.map-card strong {
-    font-size: 3rem;
+.map-info h3 {
+    margin-bottom: 25px;
 }
 
-.red {
-    border: 1px solid #ef6666;
+.map-legend p {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 15px 0;
+
+    color: #aac3cc;
 }
 
-.yellow {
-    border: 1px solid #e4c44f;
+.marker {
+    width: 14px;
+
+    height: 14px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
 }
 
-.green {
-    border: 1px solid #36d89a;
+.red-marker {
+    background: #ef6666;
 }
+
+.yellow-marker {
+    background: #e4c44f;
+}
+
+.green-marker {
+    background: #36d89a;
+}
+
+.map-help {
+    margin-top: 30px;
+
+    color: #8faab4;
+
+    font-size: .9rem;
+}
+
+
+/* ==========================================
+   POPUP DO MAPA
+========================================== */
+
+.leaflet-popup-content-wrapper {
+    background: #06131c;
+
+    color: #f2fbff;
+
+    border: 1px solid #194357;
+}
+
+.leaflet-popup-tip {
+    background: #06131c;
+}
+
+.leaflet-popup-content {
+    margin: 15px;
+}
+
+.leaflet-popup-content h3 {
+    color: #27d6ff;
+
+    margin-bottom: 10px;
+}
+
+.leaflet-popup-content p {
+    color: #aac3cc;
+
+    margin: 5px 0;
+}
+
+.leaflet-container a {
+    color: #27d6ff;
+}
+
+
+/* ==========================================
+   PONTOS DE ACESSO
+========================================== */
 
 .points {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .point small {
     display: block;
+
     margin-top: 20px;
+
     color: #27d6ff;
 }
 
+
+/* ==========================================
+   CURSOS
+========================================== */
+
 .course-grid {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .course-grid button {
@@ -285,15 +499,19 @@ section {
     border-radius: 8px;
 
     cursor: pointer;
+
+    transition: .2s;
 }
 
 .course-grid button:hover {
     background: #27d6ff;
+
     color: #031117;
 }
 
 .course-result {
     max-width: 700px;
+
     margin: 30px auto 0;
 
     padding: 25px;
@@ -305,8 +523,25 @@ section {
     background: rgba(39,214,255,.05);
 }
 
+.course-result h3 {
+    color: #27d6ff;
+
+    margin-bottom: 10px;
+}
+
+.course-result p {
+    color: #aac3cc;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   INDICADORES
+========================================== */
+
 .dashboard {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .metric span {
@@ -315,12 +550,18 @@ section {
 
 .metric h3 {
     font-size: 2.5rem;
+
     color: #27d6ff;
 }
 
 .metric p {
     color: #9db6c0;
 }
+
+
+/* ==========================================
+   MÉTRICA PRINCIPAL
+========================================== */
 
 .success {
     max-width: 900px;
@@ -336,8 +577,26 @@ section {
     background: rgba(54,216,154,.05);
 }
 
+.success h3 {
+    color: #36d89a;
+
+    margin-bottom: 10px;
+}
+
+.success p {
+    color: #aac3cc;
+
+    margin: 8px 0;
+}
+
+
+/* ==========================================
+   DOAÇÃO
+========================================== */
+
 .donation {
     max-width: 700px;
+
     margin: auto;
 }
 
@@ -355,7 +614,20 @@ select {
     border-radius: 10px;
 
     margin-bottom: 15px;
+
+    font-size: 1rem;
 }
+
+select:focus {
+    outline: none;
+
+    border-color: #27d6ff;
+}
+
+
+/* ==========================================
+   FUNCIONAMENTO LEVE
+========================================== */
 
 .light {
     display: grid;
@@ -371,6 +643,7 @@ select {
 
 .light h2 {
     font-size: 2.5rem;
+
     margin: 15px 0;
 }
 
@@ -392,19 +665,31 @@ select {
     margin: 10px 0;
 }
 
+
+/* ==========================================
+   PARCEIROS
+========================================== */
+
 .partner-grid {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .partner-grid div {
     text-align: center;
+
     font-size: 2rem;
 }
 
 .partner-grid h3 {
     font-size: 1rem;
+
     margin-top: 10px;
 }
+
+
+/* ==========================================
+   FOOTER
+========================================== */
 
 footer {
     padding: 50px 20px;
@@ -418,50 +703,172 @@ footer {
 
 footer h3 {
     color: #27d6ff;
+
+    margin-bottom: 5px;
 }
 
-@media(max-width:1000px) {
+footer small {
+    display: block;
+
+    margin-top: 10px;
+}
+
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media(max-width: 1000px) {
 
     nav {
         display: none;
     }
+
 
     .hero,
     .light {
         grid-template-columns: 1fr;
     }
 
+
     .problem-grid,
     .points,
     .course-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+
 
     .dashboard {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+
 
     .partner-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+
+
+    .map-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+
+    .map-info {
+        width: 100%;
+    }
+
 }
 
-@media(max-width:650px) {
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media(max-width: 650px) {
 
     section {
         padding: 60px 5%;
     }
 
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 80px;
+
+        padding-bottom: 80px;
+    }
+
+
     .hero h1 {
         font-size: 3.5rem;
     }
+
+
+    .hero-card {
+        padding: 30px;
+    }
+
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
 
     .problem-grid,
     .points,
     .course-grid,
     .dashboard,
-    .partner-grid,
-    .map-container {
+    .partner-grid {
         grid-template-columns: 1fr;
     }
+
+
+    .map-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+
+    #map {
+        height: 350px;
+
+        border-radius: 20px;
+    }
+
+
+    .map-info {
+        padding: 25px;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .buttons .btn {
+        text-align: center;
+    }
+
+
+    .light h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+/* ==========================================
+   TELAS MUITO PEQUENAS
+========================================== */
+
+@media(max-width: 400px) {
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+
+    section {
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .hero-card,
+    .problem-grid article,
+    .point,
+    .course-grid article,
+    .metric {
+        padding: 22px;
+    }
+
 }

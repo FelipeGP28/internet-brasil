@@ -19,6 +19,12 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Leaflet - mapa -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
 </head>
 
 <body>
@@ -48,7 +54,9 @@
 
 <main>
 
-<!-- HERO -->
+<!-- =====================================
+     HERO
+===================================== -->
 
 <section id="inicio" class="hero">
 
@@ -110,7 +118,9 @@
 </section>
 
 
-<!-- PROBLEMA -->
+<!-- =====================================
+     PROBLEMA
+===================================== -->
 
 <section class="problem">
 
@@ -187,7 +197,9 @@
 </section>
 
 
-<!-- MAPA -->
+<!-- =====================================
+     MAPA
+===================================== -->
 
 <section id="mapa">
 
@@ -196,59 +208,55 @@
         <span>MAPEAMENTO</span>
 
         <h2>
-            Onde está a exclusão digital?
+            Onde estão os pontos de acesso?
         </h2>
 
         <p>
-            Demonstração fictícia de um mapa
-            de conectividade.
+            Encontre locais com internet,
+            computadores e capacitação digital.
         </p>
 
     </div>
 
 
-    <div class="map-container">
+    <div class="map-wrapper">
 
-        <div class="map-card red">
-
-            <strong>🔴</strong>
-
-            <h3>
-                Baixa conexão
-            </h3>
-
-            <p>
-                Região Norte
-            </p>
-
-        </div>
+        <div id="map"></div>
 
 
-        <div class="map-card yellow">
-
-            <strong>🟡</strong>
+        <div class="map-info">
 
             <h3>
-                Conexão limitada
+                📍 Pontos de acesso
             </h3>
 
-            <p>
-                Região Central
-            </p>
 
-        </div>
+            <div class="map-legend">
+
+                <p>
+                    <span class="marker green-marker"></span>
+                    Boa conexão
+                </p>
+
+                <p>
+                    <span class="marker yellow-marker"></span>
+                    Conexão limitada
+                </p>
+
+                <p>
+                    <span class="marker red-marker"></span>
+                    Baixa conexão
+                </p>
+
+            </div>
 
 
-        <div class="map-card green">
+            <p class="map-help">
 
-            <strong>🟢</strong>
+                Clique nos marcadores do mapa
+                para visualizar as informações
+                de cada local.
 
-            <h3>
-                Boa conexão
-            </h3>
-
-            <p>
-                Região Sul
             </p>
 
         </div>
@@ -258,7 +266,9 @@
 </section>
 
 
-<!-- PONTOS -->
+<!-- =====================================
+     PONTOS DE ACESSO
+===================================== -->
 
 <section id="pontos">
 
@@ -336,7 +346,9 @@
 </section>
 
 
-<!-- CAPACITAÇÃO -->
+<!-- =====================================
+     CAPACITAÇÃO
+===================================== -->
 
 <section id="cursos" class="courses">
 
@@ -443,7 +455,9 @@
 </section>
 
 
-<!-- INDICADORES -->
+<!-- =====================================
+     INDICADORES
+===================================== -->
 
 <section id="indicadores">
 
@@ -533,9 +547,7 @@
         </h3>
 
         <p>
-
             Número de usuários ativos recorrentes.
-
         </p>
 
         <p>
@@ -552,7 +564,9 @@
 </section>
 
 
-<!-- EQUIPAMENTOS -->
+<!-- =====================================
+     EQUIPAMENTOS
+===================================== -->
 
 <section class="equipment">
 
@@ -565,8 +579,10 @@
         </h2>
 
         <p>
+
             Equipamentos podem ganhar uma nova vida
             ajudando na inclusão digital.
+
         </p>
 
     </div>
@@ -618,7 +634,9 @@
 </section>
 
 
-<!-- LEVE -->
+<!-- =====================================
+     FUNCIONAMENTO LEVE
+===================================== -->
 
 <section class="light">
 
@@ -629,8 +647,10 @@
         </span>
 
         <h2>
+
             Se a internet é limitada,
             nosso site também precisa ser leve.
+
         </h2>
 
         <p>
@@ -661,7 +681,9 @@
 </section>
 
 
-<!-- PARCEIROS -->
+<!-- =====================================
+     PARCEIROS
+===================================== -->
 
 <section class="partners">
 
@@ -679,31 +701,46 @@
     <div class="partner-grid">
 
         <div>
+
             📡
+
             <h3>
                 Operadoras
             </h3>
+
         </div>
 
+
         <div>
+
             🏫
+
             <h3>
                 Escolas
             </h3>
+
         </div>
 
+
         <div>
+
             🏢
+
             <h3>
                 Empresas
             </h3>
+
         </div>
 
+
         <div>
+
             🏛️
+
             <h3>
                 Governo
             </h3>
+
         </div>
 
     </div>
@@ -712,6 +749,10 @@
 
 </main>
 
+
+<!-- =====================================
+     FOOTER
+===================================== -->
 
 <footer>
 
@@ -730,7 +771,16 @@
 </footer>
 
 
+<!-- Leaflet -->
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<!-- Seu JavaScript -->
+
 <script src="js/script.js"></script>
 
 </body>
+
 </html>
