@@ -15,14 +15,17 @@ function mostrarCurso(tipo) {
 
     let titulo = "";
     let conteudo = "";
+    let link = "";
 
     if (tipo === "gov") {
 
         titulo = "🏛️ Capacitação Gov.br";
 
         conteudo =
-            "Aprenda a acessar serviços públicos digitais, " +
-            "criar sua conta e utilizar recursos disponíveis.";
+        "Aprenda a acessar serviços públicos digitais, " +
+        "criar sua conta e utilizar recursos disponíveis.";
+
+        link = "https://www.gov.br";
 
     }
 
@@ -31,8 +34,10 @@ function mostrarCurso(tipo) {
         titulo = "💼 Currículo Digital";
 
         conteudo =
-            "Aprenda a criar um currículo, organizar " +
-            "suas experiências e procurar oportunidades.";
+        "Aprenda a criar um currículo, organizar " +
+        "suas experiências e procurar oportunidades.";
+
+        link = "https://solides.com.br/blog/fazer-um-bom-curriculo/";
 
     }
 
@@ -41,8 +46,10 @@ function mostrarCurso(tipo) {
         titulo = "💰 PIX com segurança";
 
         conteudo =
-            "Aprenda boas práticas para utilizar o PIX, " +
-            "evitar golpes e proteger suas informações.";
+        "Aprenda boas práticas para utilizar o PIX, " +
+        "evitar golpes e proteger suas informações.";
+
+        link = "https://oespecialista.safra.com.br/6-dicas-pix-seguranca/";
 
     }
 
@@ -51,8 +58,10 @@ function mostrarCurso(tipo) {
         titulo = "🔎 Internet básica";
 
         conteudo =
-            "Aprenda a utilizar navegador, pesquisa, " +
-            "e-mail e ferramentas básicas da internet.";
+        "Aprenda a utilizar navegador, pesquisa, " +
+        "e-mail e ferramentas básicas da internet.";
+
+        link = "https://www.firefox.com/pt-BR/more/what-is-a-browser/";
 
     }
 
@@ -63,9 +72,11 @@ function mostrarCurso(tipo) {
             ${conteudo}
         </p>
 
-        <strong>
-            Curso demonstrativo.
-        </strong>
+        <a href="${link}" target="_blank">
+            <strong>
+                Curso demonstrativo.
+            </strong>
+        </a>
     `;
 
     resultado.scrollIntoView({
@@ -346,8 +357,7 @@ if (
 
 
     // ======================================
-    // AJUSTA O MAPA PARA MOSTRAR TODOS
-    // OS PONTOS
+    // AJUSTA O MAPA PARA MOSTRAR TODOS OS PONTOS
     // ======================================
 
     const coordenadas =
