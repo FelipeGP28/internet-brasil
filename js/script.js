@@ -5,6 +5,7 @@ function mostrarCurso(tipo) {
 
     let titulo = "";
     let conteudo = "";
+    let link = ""; // 1. Variável criada para guardar a URL
 
     if (tipo === "gov") {
 
@@ -13,6 +14,8 @@ function mostrarCurso(tipo) {
         conteudo =
         "Aprenda a acessar serviços públicos digitais, " +
         "criar sua conta e utilizar recursos disponíveis.";
+
+        link = "https://www.gov.br"; // Cole o link do curso de Gov aqui
 
     }
 
@@ -24,6 +27,8 @@ function mostrarCurso(tipo) {
         "Aprenda a criar um currículo, organizar " +
         "suas experiências e procurar oportunidades.";
 
+        link = "https://solides.com.br/blog/fazer-um-bom-curriculo/"; // Cole o link do curso de Currículo aqui
+
     }
 
     if (tipo === "pix") {
@@ -33,6 +38,8 @@ function mostrarCurso(tipo) {
         conteudo =
         "Aprenda boas práticas para utilizar o PIX, " +
         "evitar golpes e proteger suas informações.";
+
+        link = "https://oespecialista.safra.com.br/6-dicas-pix-seguranca/"; // Cole o link do curso de PIX aqui
 
     }
 
@@ -44,8 +51,11 @@ function mostrarCurso(tipo) {
         "Aprenda a utilizar navegador, pesquisa, " +
         "e-mail e ferramentas básicas da internet.";
 
+        link = "https://www.firefox.com/pt-BR/more/what-is-a-browser/"; // Cole o link do curso de Internet aqui
+
     }
 
+    // 2. HTML atualizado usando a variável ${link} na tag <a>
     resultado.innerHTML = `
         <h3>${titulo}</h3>
 
@@ -53,55 +63,15 @@ function mostrarCurso(tipo) {
             ${conteudo}
         </p>
 
-        <strong>
-            Curso demonstrativo.
-        </strong>
+        <a href="${link}" target="_blank">
+            <strong>
+                Curso demonstrativo.
+            </strong>
+        </a>
     `;
 
     resultado.scrollIntoView({
         behavior: "smooth"
     });
-
-}
-
-
-function registrarDoacao() {
-
-    const equipamento =
-        document.getElementById("equipamento").value;
-
-    const resultado =
-        document.getElementById("doacaoResultado");
-
-    if (equipamento === "") {
-
-        resultado.innerHTML = `
-            <p>
-                ⚠️ Selecione um equipamento.
-            </p>
-        `;
-
-        return;
-    }
-
-    resultado.innerHTML = `
-        <div class="success">
-
-            <h3>
-                💚 Obrigado!
-            </h3>
-
-            <p>
-                Seu interesse em doar
-                <strong>${equipamento}</strong>
-                foi registrado.
-            </p>
-
-            <small>
-                Demonstração educacional.
-            </small>
-
-        </div>
-    `;
 
 }
